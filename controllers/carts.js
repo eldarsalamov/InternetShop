@@ -2,7 +2,6 @@ const Cart = require("../models/Cart");
 
 const controllers = {
   addToCart: async (req, res) => {     // добавляем бренд
-    req.body = undefined;
     const { user, product, amount } = req.body;
     let cart = await Cart.findOne({ user })
     if(cart) {
