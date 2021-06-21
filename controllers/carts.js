@@ -23,7 +23,7 @@ const controllers = {
         user,
         products: [
           {
-            item: product, 
+            item: product,
             amount: amount,
           },
         ],
