@@ -7,4 +7,5 @@ router.use(require("./categories"));
 router.use(require("./products"));
 router.use(require("./reviews"));
 router.use(require("./users"));
+
 module.exports = router;

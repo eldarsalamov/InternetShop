@@ -3,15 +3,15 @@ const mongoose = require("mongoose");
 const reviewsSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: true,
+    required: true
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "user",
+    ref: "user"
   },
   product: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "product",
+    ref: "product"
   },
   createdAt: {
     type: Date,

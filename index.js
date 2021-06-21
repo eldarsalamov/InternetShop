@@ -1,11 +1,12 @@
 const express = require("express"); // подключили экспресс
 const mongoose = require("mongoose"); // подключили монгуз
+const indexRouter = require('./routes/index')
 
 const app = express(); //
 
 app.use(express.json());
 app.use(express.urlencoded());
-//app.use(require('./routes/index'));
+app.use(indexRouter);
 
 mongoose
   .connect(

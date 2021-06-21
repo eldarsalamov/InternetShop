@@ -1,16 +1,17 @@
 const mongoose = require("mongoose");
 
-const brandSchema = new mongoose.Schema({   // схема бренда
+const brandSchema = new mongoose.Schema({
   name: {
     type: String,
+    required: true,
   },
-  createdAt: {        // создано
+  createdAt: {
     type: Date,
-    default: Date.now,   //Возвращаем числовое значение, соответствующее текущему времени
+    default: Date.now,
   },
-  updatedAt: {          //обновлено
+  updatedAt: {
     type: Date,
-    default: Date.now,   //Возвращаем числовое значение соответствующее текущему времени
+    default: Date.now,
   },
 });
 module.exports = mongoose.model("brand", brandSchema);

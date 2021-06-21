@@ -1,16 +1,17 @@
-const mongoose = require('mongoose') // подключаем библиотеку
+const mongoose = require('mongoose');
 
-const categorySchema = new mongoose.Schema({ // под каждую категорию даем ключ
-  clothes: {
-    type: String,
+const categorySchema = new mongoose.Schema({
+  name: {
+    type: String
+  },
+  createdAt : {
+    type: Date,
+    default: Date.now
+  },
+  updatedAt: {
+    type: Date,
+    default: Date.now
+  }
+})
 
-  },
-  footwear: {  // обувь клю для категории age
-    type: String, // строковый тип для age
-  },
-  accessories : {
-    type: String,
-  },
-});
-
-module.exports = mongoose.model('categories' , categorySchema);
+module.exports = mongoose.model('category', categorySchema)

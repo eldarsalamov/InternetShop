@@ -1,6 +1,6 @@
-const User = require("../models/User"); // подключаем модель
+const User = require("../models/User");
 
-const userController = {
+class userController {
   async create(req, res) {
     try {
       const { userName, email, login, password } = req.body;
@@ -18,4 +18,4 @@ const userController = {
   }
 }
 
-module.exports =  userController;
+module.exports = new userController();
