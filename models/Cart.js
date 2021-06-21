@@ -3,20 +3,20 @@ const mongoose = require('mongoose');
 const cartSchema = new mongoose.Schema({
   user: {
     type: mongoose.Types.ObjectId,
-    //ref: 'user'
+    ref: 'users'
   },
-  updatedAt: {
+  updated: {
     type: Date,
     default: Date.now
   },
-  createdAt: {
+  created: {
     type: Date,
     default: Date.now
   },
   products: [{
     item: {
       type:  mongoose.Types.ObjectId,
-     //ref: 'product'
+     ref: 'product'
     },
     amount: {       //количество
       type: Number,

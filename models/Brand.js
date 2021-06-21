@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const brandSchema = new mongoose.Schema({   // схема бренда
   name: {
     type: String,
-
   },
   createdAt: {        // создано
     type: Date,
