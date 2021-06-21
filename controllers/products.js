@@ -6,7 +6,7 @@ const getProduct = async (req, res)=>{
 };
 
 const getProductId = async (req, res)=>{
-  const productId =await Product.findById()
+  const productId = await Product.findById(req.params.id)
   res.json(productId);
 };
 
@@ -15,7 +15,5 @@ const  postProduct = async (req, res)=>{
     Blazers: req.body.Blazers,
     Shirts: req.body.Shirts,
     Pants: req.body.Pants,
-
-
   })
 }
